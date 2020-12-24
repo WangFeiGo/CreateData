@@ -1,0 +1,26 @@
+{
+    "id":"1600804133247648822",
+    "alert_type":4,
+    "rule_id":0,
+    "risk":1,
+    "time":"2020-12-01 03:48:53",
+    "sm_inpath":"",
+    "sm_summary":"文本",
+    "sm_desc":"文本",
+    "sm_zf_highlight":"信息",
+    "sip":"10.20.10.103",
+    "sport":"62809",
+    "smac":"F4-4D-30-D0-25-44",
+    "dip":"10.20.10.8",
+    "dport":"52565",
+    "dmac":"2C-4D-54-97-61-6B",
+    "xm_dir":1,
+    "app_pro":"Im",
+    "app_opt":{
+        "protocol":"RTX",
+        "sender":"10447",
+        "receiver":"10912",
+        "account":"10447(10.20.10.103)",
+        "msg_content":""
+    }
+}
