@@ -5,8 +5,12 @@
 # @File     : CreateSensitiveData.py
 # @Software : PyCharm
 
+# 添加环境变量
+import os,sys
+ENV_DIR = os.path.abspath(os.path.join(os.getcwd(), ".."))
+sys.path.append(ENV_DIR)
+
 import json
-import os
 import random
 from common import ReadJSON
 import datetime
