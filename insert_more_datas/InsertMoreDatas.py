@@ -27,13 +27,14 @@ if __name__ == '__main__':
 
     # 读取csv文件内容
     dga_list = []
-    with open('dga.csv', 'r') as f:
+    with open('dga_black.csv', 'r') as f:
         reader = csv.reader(f)
         for row in reader:
             dga_list.append(row[0])
 
     time1 = time.time()
     # 控制插入的数据量，以及id的起始值
+    # insert into table ("id", "alert_id") values (1,111),(2,222),(3,333) 高效
     insert_values = "".join([values %(i, dga_list[i]) for i in range(10000)])
     # 拼接sql，把最后的逗号去掉
     sql = insert_sql + insert_values[:-3]+";"

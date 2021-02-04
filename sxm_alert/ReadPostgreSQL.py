@@ -15,8 +15,8 @@ from common import ExcutePGSQL
 def get_device_id():
 
     dbinfo = {
-        "host": "10.20.31.81",  # 内网
-        # "host": "10.20.13.20", # 外网
+        # "host": "10.20.31.81", # 内网
+        "host": "10.20.13.20", # 外网
         "user": "postgres",
         "password": "postgres",
         "port": 5432}

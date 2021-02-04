@@ -18,11 +18,20 @@ def doc2pdf(input_file):
     doc.Close()
     word.Quit()
 
+def docx2pdf(input_file):
+    word = Dispatch('Word.Application')
+    doc = word.Documents.Open(input_file)
+    doc.SaveAs(input_file.replace(".docx", ".pdf"), FileFormat=wdFormatPDF)
+    doc.Close()
+    word.Quit()
+
 def get_pdf(word_directory):
     for root, dirs, filenames in walk(word_directory):
         for file in filenames:
             try:
-                if file.endswith(".doc") or file.endswith(".docx"):
+                if file.endswith(".docx"):
+                    docx2pdf(str(root + "\\" + file))
+                elif file.endswith(".doc"):
                     doc2pdf(str(root + "\\" + file))
             except Exception as e:
                 print(e.args)
