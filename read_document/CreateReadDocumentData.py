@@ -129,3 +129,23 @@ if __name__ == "__main__":
         run.create_document_title()
         run.create_document_content()
         run.save("\\read_document\\datas\\word\\" + str(i) + "_" + run.article_title + "_" + run.key_words)
+
+        # 生成比对文件，不用的时候，可以注释掉
+        # 对比txt和放在word目录下
+        with open(os.path.abspath('..') + "\\read_document\\datas\\word\\" + str(i) + "_" + run.article_title + "_" + run.key_words + ".txt","w",encoding='utf-8') as f:
+            f.write(run.head_content)
+            f.write('\r\n')
+            f.write(run.big_title)
+            f.write('\r\n')
+            if run.head_content == "页眉":
+                f.write(run.secret_id)
+                f.write('\r\n')
+            f.write(run.small_title)
+            f.write('\r\n')
+            f.write(run.article_title)
+            f.write('\r\n')
+            f.write(run.paragraph1.replace("Exchange",run.key_words))
+            f.write('\r\n')
+            f.write(run.paragraph2.replace("Exchange",run.key_words))
+            f.write('\r\n')
+            f.write(run.paragraph3.replace("Exchange",run.key_words))

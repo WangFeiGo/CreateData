@@ -1,5 +1,9 @@
 **追加功能记录：**
 
+2021年03月04号 
+    添加代码，可以把word中的文字提取出来，做来比对       
+        CreateData\read_document\CreateReadDocumentData.py
+
 2021年02月04号
     添加文件上传到ftp的公共方法
         CreateData\common\FtpToFile.py
