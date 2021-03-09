@@ -22,7 +22,7 @@ class FtpToFile():
         self.port = port
         self.ftp = FTP()
         # 重新设置下编码方式
-        self.ftp.encoding = 'gbk'
+        self.ftp.encoding = 'utf-8'
         self.log_file = open(os.path.abspath('..')+"\\ftplog.txt", "a")
         self.file_list = []
 

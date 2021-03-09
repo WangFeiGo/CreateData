@@ -1,5 +1,17 @@
 **追加功能记录：**
 
+2021年03月09号
+    添加pdf转picture的公共方法
+        CreateData\common\Pdf2Picture.py
+    添加pdf转picture的业务方法
+        CreateData\read_document\Pdf2Picture.py
+    添加pdf转word的公共方法
+        CreateData\common\Pdf2Word.py
+    添加pdf转word的业务方法
+        CreateData\read_document\Pdf2Word.py
+    添加获取百度文库下载链接的utils
+        CreateData\utils\GetBaiDuDownloadUrl\GetBaiDuDownloadUrl.py
+        
 2021年03月04号 
     添加代码，可以把word中的文字提取出来，做来比对       
         CreateData\read_document\CreateReadDocumentData.py
